@@ -7,14 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+<header>
 <%= render 'layouts/navbar' %>
-<div id="call-to-action">
- 
-<div class="container">
+</header>  
+
+
   <%= yield %>
-</div> <!-- container -->
-</div> 
+
+<footer>
 <%= render 'layouts/footer' %>
+</footer>
 </body>
 </html>

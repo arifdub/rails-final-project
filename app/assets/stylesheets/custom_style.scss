@@ -12,7 +12,7 @@
     text-align: center;
 }
 
-#call-to-action{
+#hero{
     height: 500px;
     background : url("/assets/hero-back.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -22,12 +22,13 @@
     -o-background-size: cover;
     
 }
-.welcome{
-    margin-top: 100px;
+.hero-area h1{
     color:white;
-    height:300px;
-    font-size:2em;
+    font-weight:bold;
+    font-size: 4.3em;
+    font-family: comic-sans;
 }
+
 .btn-center{
     width:300px;
     margin-top:50px;
@@ -40,7 +41,7 @@ footer{
     height:150px;
     background-color: #2C3E50;
     padding:20px;
-    margin-top:150px;
+    margin-top:50px;
     font-size: 1.4em;
     color:white;
 }
