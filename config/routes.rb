@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	get '/about', to: 'welcome#about'
+	get '/contact', to: 'welcome#contact'
   resources :menus
 	devise_for :users, :controllers => { registrations: 'registrations' }
 
