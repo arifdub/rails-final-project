@@ -3,6 +3,9 @@ class MenusController < ApplicationController
 
   # GET /menus
   # GET /menus.json
+  def menushow
+	  @menus = Menu.all
+  end
   def index
     @menus = Menu.all
   end
