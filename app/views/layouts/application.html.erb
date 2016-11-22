@@ -10,8 +10,22 @@
 <header>
 <%= render 'layouts/navbar' %>
 </header>  
-
-
+<div class="container">
+	
+	
+<% if notice %>
+<div class="alert alert-success">
+	<a href="#" class="close" data-dismiss="alert">&#215;</a>
+	<%= notice %>
+</div>
+<% end %>
+<% if alert %>
+<div class="alert alert-danger">
+	<a href="#" class="close" data-dismiss="alert">&#215;</a>
+   <%= alert %>
+</div>
+<% end %>
+</div>
   <%= yield %>
 
 <footer>
