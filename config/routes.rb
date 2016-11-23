@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+    get '/cart', to: 'cart#index'
+
 	get '/about', to: 'welcome#about'
 	get '/contact', to: 'welcome#contact'
   resources :menus

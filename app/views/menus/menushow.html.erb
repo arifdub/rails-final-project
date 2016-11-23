@@ -1,26 +1,26 @@
 <div class="container">
-	<p id="notice"><%= notice %></p>
-	
+<p id="notice"><%= notice %></p>
 	<h2 class="text-center"><strong>Our Starter Menu</strong></h2>
 	<% @menus.each_slice(3) do |group| %>
 		<div class="row">
 			<% group.each do |menu| %>
-			<div class="col-md-4 ">
-					<div class="well menu-items">
-				   <%= image_tag menu.image_url, :height => '120', 
-				      :width => '120', class: "img-circle center-block" %>
-	
-			    <h3 class="text-center">  <%= menu.title %></h3>
-			     <p> <%= menu.description %></p>
-			      <p>Price: <%= number_to_currency(menu.price, :unit => "€") %></p>
-			      
-			      <p><%= button_to 'Add to Cart', "#", class: 'btn btn-info btn-block' %></p>
+				<div class="col-md-4 ">
+					<div class="well">
+						<div class="menu-items">
+							<%= image_tag menu.image_url, :height => '120', 
+							:width => '120', class: "img-circle center-block" %>	
+							<h3 class="text-center">  <%= menu.title %></h3>
+							<p> <%= menu.description %></p>
+							<p>Price: <%= number_to_currency(menu.price, :unit => "€") %></p>
+						</div>	
+							<hr>
+							
+							<p><%= button_to 'Add to Cart', "#", class: 'btn btn-info btn-block' %></p>
+						
 					</div>
-			</div>
+				</div>
 			<% end %> 
 		</div>
 	<% end %>
-	 		
-	 		 
 </div>
  
