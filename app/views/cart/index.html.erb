@@ -1,3 +1,42 @@
 <div class="container">
-<h2>Your Shopping Cart</h2>
+	<h1 class="text-center">Your Shopping Cart</h1>
+	
+	
+	<br>
+	<br>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<% total_price = 0 %>
+			<% total_quantity = 0 %>
+			
+			<table class="table table-striped">
+			<th>Item Title</th>
+			<th>item Price</th>
+			<th>Item Quantity</th>	
+			<% @cart.each do |id, quantity| %>
+				
+				<% menu = Menu.find_by_id(id) %>
+				<tr>
+				<td><%= link_to menu.title, menu %></td>
+				<td><%= number_to_currency(menu.price, :unit => "€") %></td> 
+						
+				<td><%= quantity %></td>
+					
+				</tr>
+				<% total_quantity += quantity %>
+				<% total_price += quantity * menu.price %>
+				
+			<% end %>
+			<tr>
+			<td><strong>Total</strong></td>
+			<td><%= number_to_currency(total_price, :unit => "€" ) %></td>
+			<td><%= total_quantity %></td>
+			</tr>
+			</table>
+			
+			<%= link_to "Checkout", "#" , class: "btn btn-success btn-lg btn-block"%>
+			<%= link_to "Empty Cart", "/cart/clear" , class: "btn btn-danger btn-lg btn-block"%>
+			
+		</div>
+	</div>	
 </div>

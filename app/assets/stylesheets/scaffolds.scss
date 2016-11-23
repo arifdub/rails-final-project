@@ -17,7 +17,10 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
-
+.session_button:visited { color:#FFF; }
+.btn-primary:visited, .btn-warning:visited, .btn-danger:visited,  .btn-success:visited, .btn-info:visited,  .btn-inverse:visited {
+    color: #FFFFFF;
+    }
 a {
   color: #000;
 

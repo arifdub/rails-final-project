@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-    get '/cart', to: 'cart#index'
+    get '/cart' => 'cart#index'
+	get '/cart/clear' => 'cart#clearCart'
+	get '/cart/index'
+	get '/cart/:id' => 'cart#add'
 
 	get '/about', to: 'welcome#about'
 	get '/contact', to: 'welcome#contact'
