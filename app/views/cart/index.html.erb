@@ -12,7 +12,8 @@
 			<table class="table table-striped">
 			<th>Item Title</th>
 			<th>item Price</th>
-			<th>Item Quantity</th>	
+			<th>Item Quantity</th>
+			<th>Item Remove</th>
 			<% @cart.each do |id, quantity| %>
 				
 				<% menu = Menu.find_by_id(id) %>
@@ -21,6 +22,7 @@
 				<td><%= number_to_currency(menu.price, :unit => "€") %></td> 
 						
 				<td><%= quantity %></td>
+				<td><button class="btn btn-sm">Remove item</button></td>
 					
 				</tr>
 				<% total_quantity += quantity %>
@@ -34,7 +36,7 @@
 			</tr>
 			</table>
 			
-			<%= link_to "Checkout", "#" , class: "btn btn-success btn-lg btn-block"%>
+			<%= link_to "Checkout", "#" , class: "btn btn-success btn-lg btn-block"%><br>
 			<%= link_to "Empty Cart", "/cart/clear" , class: "btn btn-danger btn-lg btn-block"%>
 			
 		</div>
