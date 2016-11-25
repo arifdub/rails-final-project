@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 	get '/cart/clear' => 'cart#clearCart'
 	get '/cart/index'
 	get '/cart/:id' => 'cart#add'
-	delete '/cart/:id' => 'cart#remove ,'
+	delete '/cart/:id' => 'cart#remove'
 
 	get '/about', to: 'welcome#about'
 	get '/contact', to: 'welcome#contact'

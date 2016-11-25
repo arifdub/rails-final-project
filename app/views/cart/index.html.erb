@@ -22,7 +22,7 @@
 				<td><%= number_to_currency(menu.price, :unit => "€") %></td> 
 						
 				<td><%= quantity %></td>
-				<td><button class="btn btn-sm">Remove item</button></td>
+				<td><%= link_to "Remove Item",  "/cart/#{menu.id}", method: "delete", class: "btn btn-danger btn-sm" %></td>
 					
 				</tr>
 				<% total_quantity += quantity %>
