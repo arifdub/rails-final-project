@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title, class: "label-control" %><br>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="form-group">
+    <%= f.label :description, class: "label-control" %><br>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="form-group">
+    <%= f.label :price, class: "label-control" %><br>
+    <%= f.text_field :price, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+  <div class="form-group">
+    <%= f.label :image_url, class: "label-control" %><br>
+    <%= f.text_field :image_url, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
+  <div class="form-group">
+    <%= f.label :category, class: "label-control" %><br>
+    <%= f.text_field :category, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success" %>
   </div>
 <% end %>
