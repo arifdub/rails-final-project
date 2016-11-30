@@ -2,7 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+//-------- nav bar ----- //
 .navbar .navbar-center{
     display: inline-block;
     float: none;
@@ -13,7 +13,7 @@
 }
 .navbar.navbar-default{
 	margin-bottom: 0;
-	}
+}
 
 #hero{
     height: 500px;
@@ -23,7 +23,7 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    
+   
 }
 
 .hero-area h1{
@@ -31,6 +31,13 @@
     font-weight:bold;
     font-size: 4.3em;
     font-family: comic-sans;
+    
+}
+.cont{
+	margin-top: 100px;
+}
+.home-order{
+	width: 200px;
 }
 
 .btn-center{
