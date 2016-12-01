@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 	get '/cart/index'
 	get '/cart/:id' => 'cart#add'
 	delete '/cart/:id' => 'cart#remove'
-
+	get '/category/:id' => 'menus#category'
 	get '/about', to: 'welcome#about'
 	get '/contact', to: 'welcome#contact'
   resources :menus

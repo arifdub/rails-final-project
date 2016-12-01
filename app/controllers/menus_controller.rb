@@ -3,6 +3,10 @@ class MenusController < ApplicationController
 
   # GET /menus
   # GET /menus.json
+  def category
+  	@menus = Menu.where(category: params[:id])
+  	@category = params[:id]
+  end
   def menushow
 	  @menus = Menu.all
   end
