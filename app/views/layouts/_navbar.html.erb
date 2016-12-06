@@ -27,6 +27,9 @@
 	    <% if user_signed_in? %>
 	    ]<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
 	    <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+	    <% if current_user.admin? %>
+	    <li><%= link_to "Admin", '/menus' %></li>
+	    <% end %>
 	    <% else %>
 	    <li><%= link_to new_user_session_path do %>
 	    		<i class='fa fa-sign-in fa-lg' aria-hidden='true'></i> Sign In

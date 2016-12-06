@@ -1,6 +1,7 @@
 class MenusController < ApplicationController
+  before_filter :ensure_admin
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /menus
   # GET /menus.json
   def category
@@ -78,4 +79,11 @@ class MenusController < ApplicationController
     def menu_params
       params.require(:menu).permit(:title, :description, :price, :image_url, :category)
     end
+    
+    def ensure_admin
+		unless current_user && current_user.admin?
+		render :text => "Sorry You are not admin cant access this page", :status => :unauthorized
+		return index
+		end
+	end
 end
