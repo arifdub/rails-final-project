@@ -1,0 +1,19 @@
+<div class="container">
+<h1>Orderitem#index</h1>
+
+<table class="table">
+	<th>Item Title </th>
+		<th>Item price </th>
+	<th>Item quantity </th>
+<% @order.each do |order| %>
+<tr>
+<td><%= order.title %></td>
+
+<td><%= order.price %></td>
+<td><%= order.quantity %></td>
+
+
+</tr>
+<% end %>
+</table>
+</div>
