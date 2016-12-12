@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-  before_filter :ensure_admin
+ 
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
   
   # GET /menus

@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'orderitem/index' => 'orderitem#index'
+
+  get 'orderitem/show'
+
+  get 'orderitem/new'
+
+  get 'orderitem/edit'
+  
+  get 'cart/order' => 'cart#ordershow'
+
+  	resources :orders do
+	  resources :orderitems
+	end
+	get '/checkout' => 'cart#createOrder'
     get '/cart' => 'cart#index'
 	get '/cart/clear' => 'cart#clearCart'
 	get '/cart/index'
@@ -8,7 +22,9 @@ Rails.application.routes.draw do
 	get '/about', to: 'welcome#about'
 	get '/contact', to: 'welcome#contact'
   resources :menus
-	devise_for :users, :controllers => { registrations: 'registrations' }
+	devise_for :users, :controllers => { registrations: 'registrations' } do
+		resources :orders
+	end
 	get '/menushow', to: 'menus#menushow'
 	root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
