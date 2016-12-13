@@ -1,24 +1,34 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-			<h1>Your Order Details</h1>
+			<h1>Your Order Summary</h1>
 			
 			<table class="table table-striped">
 				<th>Item Title </th>
 					<th>Item price </th>
 				<th>Item quantity </th>
+				<h4>Your order Number = <%= @order.id %></h4>
+			<% total_price = 0 %>
 			<% @orderitems.each do |order| %>
 			
 			<tr>
 			<td><%= order.title %></td>
 			
-			<td><%= order.price %></td>
+			<td><%= number_to_currency(order.price, :unit => '€') %></td>
 			<td><%= order.quantity %></td>
 			
-			
+			<% total_price += order.quantity * order.price %>
 			</tr>
 			<% end %>
+			
 			</table>
+			<div class="total">
+			 <h3>Total Price : <%= number_to_currency(total_price, :unit => '€') %></h3><br><br>
+			 </div>
+			 <div class="pay-btn">
+			 <button class="btn btn-success btn-lg pay " onclick="location.href= '/cart/thanks'" type="button"><i class="fa fa-money" aria-hidden="true"></i> Pay by Cash</button>
+			 <button class="btn btn-info btn-lg pay" ><i class="fa fa-paypal" aria-hidden="true"></i> Pay with Paypal</button>
+			 <button class="btn btn-primary btn-lg pay"><i class="fa fa-credit-card" aria-hidden="true"></i> Pay by Card</button></div>
 		</div>
 	</div>
 </div>

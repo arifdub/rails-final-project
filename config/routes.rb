@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'orderitem/edit'
   
   get 'cart/order' => 'cart#ordershow'
+  get 'cart/thanks' => 'cart#thanks'
 
   	resources :orders do
 	  resources :orderitems

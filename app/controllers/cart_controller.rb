@@ -59,6 +59,9 @@ class CartController < ApplicationController
 		@order = @orders.last
 		@orderitems = @order.orderitems
 	end
+	def thanks
+	
+	end
   
 end
 
