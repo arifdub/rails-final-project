@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'orderitem/new'
 
   get 'orderitem/edit'
-  
+  get '/category/:id' => 'menus#category'
   get 'cart/order' => 'cart#ordershow'
   get 'cart/thanks' => 'cart#thanks'
 
