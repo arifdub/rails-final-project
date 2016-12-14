@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/category/:id' => 'menus#category'
   get 'cart/order' => 'cart#ordershow'
   get 'cart/thanks' => 'cart#thanks'
+  post '/search' => 'menus#search'
 
   	resources :orders do
 	  resources :orderitems

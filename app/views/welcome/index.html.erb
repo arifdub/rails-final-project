@@ -9,13 +9,16 @@
 					
 	            </div>
 	              <br>
-	         <div class="col-md-4 col-md-offset-4">     
+	         <div class="col-md-4 col-md-offset-4">  
+		       <!-- <%= form_tag("/search", :method => "post") do %>  --> 
 	         		<div class="input-group">
-					   <input type="text" class="form-control">
-					   <span class="input-group-btn">
-					        <button class="btn btn-success" type="button">Search!</button>
-					   </span>
-					</div> 
+ 
+			 		<%= text_field_tag :q, params[:q], placeholder: "Search Dishes ", class: 'form-control' %>
+			 		<span class="input-group-btn">
+			 		<%= submit_tag "Search", class: 'btn btn-default' %>
+    </span>
+  <% end %>
+</div>					</div> 
 	         </div>      
 </div>
     </div>
