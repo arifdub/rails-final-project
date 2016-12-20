@@ -1,6 +1,7 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 	<h2 class="text-center"><strong>Our Menu</strong></h2>
+	<% if @menus.present? %>
 	<% @menus.each_slice(3) do |group| %>
 		<div class="row">
 			<% group.each do |menu| %>
@@ -19,8 +20,13 @@
 													
 					</div>
 				</div>
-			<% end %> 
+			<% end %>  <!-- menu group -->
 		</div>
+	<% end %> <!-- slice -->
+	<% else %>
+	<p style="color:red;"> No Menu item found </p>
 	<% end %>
+	
+	
 </div>
  
