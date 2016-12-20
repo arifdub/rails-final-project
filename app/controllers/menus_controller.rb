@@ -19,7 +19,11 @@ class MenusController < ApplicationController
   # GET /menus/1.json
   def show
   end
-
+  def search
+	  if params[:search]
+	  @menus = Menu.search(params[:search])
+	  end
+  end
   # GET /menus/new
   def new
     @menu = Menu.new
