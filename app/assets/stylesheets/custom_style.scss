@@ -2,6 +2,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.text-justify {
+  text-align: justify;
+}
+
 //-------- nav bar ----- //
 .navbar .navbar-center{
     display: inline-block;
