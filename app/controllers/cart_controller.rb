@@ -62,6 +62,7 @@ class CartController < ApplicationController
 	def thanks
 	
 	end
+	
   
 end
 
