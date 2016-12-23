@@ -1,7 +1,7 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 	<h2 class="text-center"><strong>Our Menu</strong></h2>
-	<% @menus.each_slice(3) do |group| %>
+	<% @menus.each_slice(3) do |group| %> <!-- make a group of 3 rows to display -->
 		<div class="row">
 			<% group.each do |menu| %>
 				<div class="col-md-4 ">
@@ -19,8 +19,8 @@
 													
 					</div>
 				</div>
-			<% end %> 
+			<% end %>  <!-- end of group.each --> 
 		</div>
-	<% end %>
+	<% end %> <!-- end of each slice -->
 </div>
  

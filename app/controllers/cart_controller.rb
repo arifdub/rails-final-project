@@ -1,5 +1,5 @@
 class CartController < ApplicationController
-  	before_filter :authenticate_user!
+  	before_filter :authenticate_user!, only:[:createOrder, :ordershow] #user must be login to checkout option
 	def add
 		id= params[:id]
 		if session[:cart] then

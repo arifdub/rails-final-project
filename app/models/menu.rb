@@ -1,10 +1,7 @@
 class Menu < ActiveRecord::Base
 	def self.search(search)
-		if search
-		where("title ilike ? OR description ilike ?", "%#{search}%", "%#{search}%") 
-		else
-			scoped
-		end
+		where("Title LIKE ? OR Description LIKE ?", "%#{search}%", "%#{search}%") 
+		
 		
 	end
 end

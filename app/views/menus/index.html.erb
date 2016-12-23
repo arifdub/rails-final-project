@@ -27,21 +27,21 @@
 				    :width => '120' %></td>
 			        <td><%= menu.category %></td>
 			        
-			        <% if current_user.admin? %>
-			        <td><%= link_to 'Show', menu, class: "btn btn-sm btn-success" %></td>
-			        <td><%= link_to 'Edit', edit_menu_path(menu),class: 
-				        "btn btn-sm btn-warning" %></td>
-			        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-sm btn-danger" %></td>
-			      </tr>
-			      <% end %>
-			    <% end %>
+			        <% if current_user.admin? %> <!-- if current user is admin display this -->
+				        <td><%= link_to 'Show', menu, class: "btn btn-sm btn-success" %></td>
+				        <td><%= link_to 'Edit', edit_menu_path(menu),class: 
+					        "btn btn-sm btn-warning" %></td>
+				        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-sm btn-danger" %></td>
+				      </tr>
+					<% end %> <!-- end of admin condition -->
+			    <% end %> <!-- end of each menu -->
 			  </tbody>
 			</table>
 			
 			<br>
-			<% if current_user.admin? %>
+			<% if current_user.admin? %> <!-- if current user is admin show this. -->
 			<%= link_to 'New Menu', new_menu_path, class: "btn btn-primary" %>
-			<% end %>
+			<% end %> <!-- end admin -->
 		</div>
 	</div>
 </div>

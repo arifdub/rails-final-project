@@ -1,6 +1,7 @@
 class MenusController < ApplicationController
  
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only:[:index] #user must be login to see editable menu items
   
   # GET /menus
   # GET /menus.json

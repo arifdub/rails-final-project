@@ -1,8 +1,8 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 	<h2 class="text-center"><strong>Our Menu</strong></h2>
-	<% if @menus.present? %>
-	<% @menus.each_slice(3) do |group| %>
+	<% if @menus.present? %> <!-- if search items are present show following -->
+	<% @menus.each_slice(3) do |group| %> <!-- make group of 3 rows -->
 		<div class="row">
 			<% group.each do |menu| %>
 				<div class="col-md-4 ">
@@ -24,8 +24,8 @@
 		</div>
 	<% end %> <!-- slice -->
 	<% else %>
-	<p style="color:red;"> No Menu item found </p>
-	<% end %>
+	<p style="color:red;"> No Menu item found </p> <!--  else show this -->
+	<% end %> <!-- end of menu present condition -->
 	
 	
 </div>
