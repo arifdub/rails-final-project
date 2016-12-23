@@ -60,6 +60,7 @@ class CartController < ApplicationController
 		@orderitems = @order.orderitems
 	end
 	def thanks
+		session[:cart] = nil
 	
 	end
 	
